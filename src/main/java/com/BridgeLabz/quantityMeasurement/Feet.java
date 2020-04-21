@@ -16,4 +16,5 @@ public class Feet {
         Feet feet = (Feet) o;
         return Double.compare(feet.value, value) == 0;
     }
+
 }
