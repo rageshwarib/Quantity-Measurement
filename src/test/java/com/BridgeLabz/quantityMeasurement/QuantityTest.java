@@ -70,4 +70,10 @@ public class QuantityTest {
         Inch2 inch2 = new Inch2(0.0);
         Assert.assertNotEquals(inch1 , inch2);
     }
+    @Test
+    public void givenEqualTwoInchValues_checkValues_shouldReturnEqual() {
+        Inch inch1 = new Inch(50.0);
+        Inch inch2 = new Inch(50.0);
+        Assert.assertEquals(inch1 , inch2);
+    }
 }
