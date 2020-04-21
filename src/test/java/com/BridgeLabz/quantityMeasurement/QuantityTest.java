@@ -28,4 +28,10 @@ public class QuantityTest {
         Feet2 feet2 = new Feet2(0.0);
         Assert.assertNotEquals(feet1 , feet2);
     }
+    @Test
+    public void givenTwoFeet_checkReference_shouldReturnNotEqual() {
+        Feet2 feet1 = new Feet2(0.0);
+        Feet2 feet2 = new Feet2(0.0);
+        Assert.assertNotEquals(feet1 , feet2);
+    }
 }
