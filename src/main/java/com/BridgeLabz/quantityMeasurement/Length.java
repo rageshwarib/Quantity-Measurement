@@ -17,7 +17,6 @@ public class Length {
     public boolean compare(Length length1, Length length2){
         return Double.compare(length1.value * length1.unit.baseUnitConversion,
                 length2.value * length2.unit.baseUnitConversion) == 0;
-
     }
 
     @Override
