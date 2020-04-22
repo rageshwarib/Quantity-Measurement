@@ -143,10 +143,18 @@ public class QuantityTest {
         Assert.assertTrue(compareCheck);
     }
     @Test
-    public void given2Inch5Cm_shouldReturnEqual() {
+    public void given2InchAnd5Cm_shouldReturnEqual() {
         Length inch = new Length(Unit.INCH,2.0);
         Length cm = new Length(Unit.CM,5.0);
         boolean compareCheck = length.compare(inch, cm);
         Assert.assertTrue(compareCheck);
     }
+    @Test
+    public void given2InchAnd2Inch_performAddition_shouldReturnResultInInch() {
+        Length inch1 = new Length(Unit.INCH,2.0);
+        Length inch2 = new Length(Unit.INCH,2.0);
+        double addition = length.addition(inch1, inch2);
+        Assert.assertEquals(4.0, addition,0.0);
+    }
+
 }

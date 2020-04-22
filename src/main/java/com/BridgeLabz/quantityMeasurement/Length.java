@@ -18,6 +18,11 @@ public class Length {
         return Double.compare(length1.value * length1.unit.baseUnitConversion,
                 length2.value * length2.unit.baseUnitConversion) == 0;
     }
+    public double addition(Length length1, Length length2) {
+        return length1.value * length1.unit.baseUnitConversion +
+                length2.value * length2.unit.baseUnitConversion;
+
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -27,4 +32,5 @@ public class Length {
         return Double.compare(length.value, value) == 0 &&
                 unit == length.unit;
     }
+
 }
