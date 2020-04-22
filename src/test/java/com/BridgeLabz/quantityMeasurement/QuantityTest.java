@@ -156,5 +156,11 @@ public class QuantityTest {
         double addition = length.addition(inch1, inch2);
         Assert.assertEquals(4.0, addition,0.0);
     }
-
+    @Test
+    public void given1FeetAnd2Inch_performAddition_shouldReturnResultInInch() {
+        Length feet = new Length(Unit.FEET,1.0);
+        Length inch = new Length(Unit.INCH,2.0);
+        double addition = length.addition(feet, inch);
+        Assert.assertEquals(14.0, addition,0.0);
+    }
 }
