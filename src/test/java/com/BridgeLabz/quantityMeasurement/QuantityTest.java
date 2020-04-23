@@ -205,4 +205,12 @@ public class QuantityTest {
         double addition = qunatity.addition(litres, ml);
         Assert.assertEquals(2.0, addition,0.0);
     }
+    @Test
+    public void givenKilogramAndGrams_shouldReturnEqual() {
+        Qunatity kg = new Qunatity(Unit.LITRE,1.0);
+        Qunatity gm = new Qunatity(Unit.MILLILITRE,1000.0);
+        boolean compareCheck = qunatity.compare(kg, gm);
+        Assert.assertTrue(compareCheck);
+    }
+
 }
