@@ -212,5 +212,11 @@ public class QuantityTest {
         boolean compareCheck = qunatity.compare(kg, gm);
         Assert.assertTrue(compareCheck);
     }
-
+    @Test
+    public void givenTonneAndKilograms_shouldReturnEqual() {
+        Qunatity tonne = new Qunatity(Unit.TONNE,1.0);
+        Qunatity kg = new Qunatity(Unit.KILOGRAM,1000.0);
+        boolean compareCheck = qunatity.compare(tonne, kg);
+        Assert.assertTrue(compareCheck);
+    }
 }
