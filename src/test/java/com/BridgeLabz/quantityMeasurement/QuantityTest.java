@@ -177,4 +177,11 @@ public class QuantityTest {
         double addition = qunatity.addition(inch, cm);
         Assert.assertEquals(3.0, addition,0.0);
     }
+    @Test
+    public void givenGallonAndLitres_shouldReturnEqual() {
+        Qunatity gallon = new Qunatity(Unit.GALLON,1.0);
+        Qunatity litre = new Qunatity(Unit.LITRE,3.78);
+        boolean compareCheck = qunatity.compare(gallon, litre);
+        Assert.assertTrue(compareCheck);
+    }
 }
