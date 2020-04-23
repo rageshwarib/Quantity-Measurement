@@ -184,4 +184,11 @@ public class QuantityTest {
         boolean compareCheck = qunatity.compare(gallon, litre);
         Assert.assertTrue(compareCheck);
     }
+    @Test
+    public void givenLitreAndMililitres_shouldReturnEqual() {
+        Qunatity litre = new Qunatity(Unit.LITRE,1.0);
+        Qunatity ml = new Qunatity(Unit.MILLILITRE,1000.0);
+        boolean compareCheck = qunatity.compare(litre, ml);
+        Assert.assertTrue(compareCheck);
+    }
 }
