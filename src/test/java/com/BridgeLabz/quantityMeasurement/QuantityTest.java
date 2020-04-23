@@ -219,4 +219,11 @@ public class QuantityTest {
         boolean compareCheck = qunatity.compare(tonne, kg);
         Assert.assertTrue(compareCheck);
     }
+    @Test
+    public void givenTonneAndGrams_performAddition_shouldReturnResultInKg() {
+        Qunatity tonne = new Qunatity(Unit.TONNE,1.0);
+        Qunatity gm = new Qunatity(Unit.GRAM,1000.0);
+        double addition = qunatity.addition(tonne, gm);
+        Assert.assertEquals(1001.0, addition,0.0);
+    }
 }
