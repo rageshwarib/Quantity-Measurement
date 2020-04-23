@@ -185,10 +185,17 @@ public class QuantityTest {
         Assert.assertTrue(compareCheck);
     }
     @Test
-    public void givenLitreAndMililitres_shouldReturnEqual() {
+    public void givenLitreAndMillilitres_shouldReturnEqual() {
         Qunatity litre = new Qunatity(Unit.LITRE,1.0);
         Qunatity ml = new Qunatity(Unit.MILLILITRE,1000.0);
         boolean compareCheck = qunatity.compare(litre, ml);
         Assert.assertTrue(compareCheck);
+    }
+    @Test
+    public void givenGallonAndLitres_performAddition_shouldReturnResultInLitres() {
+        Qunatity gallon = new Qunatity(Unit.GALLON,1.0);
+        Qunatity litres = new Qunatity(Unit.LITRE,3.78);
+        double addition = qunatity.addition(gallon, litres);
+        Assert.assertEquals(7.57, addition,0.1);
     }
 }
