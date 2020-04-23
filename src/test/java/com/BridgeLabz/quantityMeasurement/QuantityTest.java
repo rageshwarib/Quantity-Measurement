@@ -198,4 +198,11 @@ public class QuantityTest {
         double addition = qunatity.addition(gallon, litres);
         Assert.assertEquals(7.57, addition,0.1);
     }
+    @Test
+    public void givenLitresAndMillilitres_performAddition_shouldReturnResultInLitres() {
+        Qunatity litres = new Qunatity(Unit.LITRE,1.0);
+        Qunatity ml = new Qunatity(Unit.MILLILITRE,1000.0);
+        double addition = qunatity.addition(litres, ml);
+        Assert.assertEquals(2.0, addition,0.0);
+    }
 }
