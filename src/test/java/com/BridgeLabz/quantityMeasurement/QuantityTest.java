@@ -6,25 +6,25 @@ import org.junit.Test;
 public class QuantityTest {
     Qunatity qunatity = new Qunatity();
     @Test
-    public void given0FeetAnd0Feet_shouldReturnEqual() {
+    public void given0FeetAnd0Feet_shouldReturnEqual() throws QuantityException {
         Qunatity feet1 = new Qunatity(Unit.FEET,0.0);
         Qunatity feet2 = new Qunatity(Unit.FEET,0.0);
         Assert.assertEquals(feet1, feet2);
     }
     @Test
-    public void given0FeetAnd1Feet_shouldReturnNotEqual() {
+    public void given0FeetAnd1Feet_shouldReturnNotEqual() throws QuantityException {
         Qunatity feet1 = new Qunatity(Unit.FEET,0.0);
         Qunatity feet2 = new Qunatity(Unit.FEET,1.0);
         Assert.assertNotEquals(feet1, feet2);
     }
     @Test
-    public void given0FeetAndNull_shouldReturnNotEqual() {
+    public void given0FeetAndNull_shouldReturnNotEqual() throws QuantityException {
         Qunatity feet1 = new Qunatity(Unit.FEET,0.0);
         Qunatity feet2 = null;
         Assert.assertNotEquals(feet1, feet2);
     }
     @Test
-    public void givenTwoFeetWithDifferentType_shouldReturnNotEqual() {
+    public void givenTwoFeetWithDifferentType_shouldReturnNotEqual() throws QuantityException {
         Qunatity feet1 = new Qunatity(Unit.FEET,0.0);
         Feet2 feet2 = new Feet2(0.0);
         Assert.assertNotEquals(feet1, feet2);
@@ -36,31 +36,31 @@ public class QuantityTest {
         Assert.assertNotEquals(feet1 , feet2);
     }
     @Test
-    public void givenEqualTwoFeetValues_checkValues_shouldReturnEqual() {
+    public void givenEqualTwoFeetValues_checkValues_shouldReturnEqual() throws QuantityException {
         Qunatity feet1 = new Qunatity(Unit.FEET,30.0);
         Qunatity feet2 = new Qunatity(Unit.FEET,30.0);
         Assert.assertEquals(feet1, feet2);
     }
     @Test
-    public void given0InchAnd0Inch_shouldReturnEqual() {
+    public void given0InchAnd0Inch_shouldReturnEqual() throws QuantityException {
         Qunatity inch1 = new Qunatity(Unit.INCH,0.0);
         Qunatity inch2 = new Qunatity(Unit.INCH,0.0);
         Assert.assertEquals(inch1, inch2);
     }
     @Test
-    public void given0InchAnd1Inch_shouldReturnNotEqual() {
+    public void given0InchAnd1Inch_shouldReturnNotEqual() throws QuantityException {
         Qunatity inch1 = new Qunatity(Unit.INCH,0.0);
         Qunatity inch2 = new Qunatity(Unit.INCH,1.0);
         Assert.assertNotEquals(inch1, inch2);
     }
     @Test
-    public void given0InchAndNull_shouldReturnNotEqual() {
+    public void given0InchAndNull_shouldReturnNotEqual() throws QuantityException {
         Qunatity inch1 = new Qunatity(Unit.INCH,0.0);
         Qunatity inch2 = null;
         Assert.assertNotEquals(inch1, inch2);
     }
     @Test
-    public void givenTwoInchWithDifferentType_shouldReturnNotEqual() {
+    public void givenTwoInchWithDifferentType_shouldReturnNotEqual() throws QuantityException {
         Qunatity inch1 = new Qunatity(Unit.INCH,0.0);
         Inch2 inch2 = new Inch2(0.0);
         Assert.assertNotEquals(inch1, inch2);
@@ -72,7 +72,7 @@ public class QuantityTest {
         Assert.assertNotEquals(inch1 , inch2);
     }
     @Test
-    public void givenEqualTwoInchValues_checkValues_shouldReturnEqual() {
+    public void givenEqualTwoInchValues_checkValues_shouldReturnEqual() throws QuantityException {
         Qunatity inch1 = new Qunatity(Unit.INCH,30.0);
         Qunatity inch2 = new Qunatity(Unit.INCH,30.0);
         Assert.assertEquals(inch1, inch2);
@@ -227,7 +227,7 @@ public class QuantityTest {
         Assert.assertEquals(1001.0, addition,0.0);
     }
     @Test
-    public void givenFahrenheitAndCelsius_shouldReturnEqual() {
+    public void givenFahrenheitAndCelsius_shouldReturnEqual() throws QuantityException {
         Qunatity fahrenheit = new Qunatity(Unit.FAHRENHEIT,212.0);
         Qunatity celsius = new Qunatity(Unit.CELSIUS,100.0);
        double fahreHeitToCelcius = qunatity.temperatureConversion(fahrenheit, Unit.FAHRENHEIT);

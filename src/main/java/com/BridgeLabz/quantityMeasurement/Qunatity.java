@@ -7,8 +7,11 @@ public class Qunatity {
     public Qunatity() {
     }
 
-    public Qunatity(Unit unit, double value) {
+    public Qunatity(Unit unit, double value) throws QuantityException {
         this.unit = unit;
+        if (value < 0.0 && !unit.quantityType.equals("Temperature"))
+            throw new QuantityException(QuantityException.ExceptionType.INVALID_QUANTITY,
+                    "This Quantity can't be negative");
         this.value = value;
     }
 
