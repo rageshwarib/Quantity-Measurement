@@ -19,7 +19,10 @@ public class Qunatity {
         return Double.compare(qunatity1.value * qunatity1.unit.baseUnitConversion,
                 qunatity2.value * qunatity2.unit.baseUnitConversion) == 0;
     }
-    public double addition(Qunatity qunatity1, Qunatity qunatity2) {
+    public double addition(Qunatity qunatity1, Qunatity qunatity2) throws QuantityException {
+        if(!qunatity1.unit.quantityType.equals(qunatity2.unit.quantityType))
+            throw new QuantityException(QuantityException.ExceptionType.UNEQUAL_QUANTITIES,
+                    "Unequal quantities can't be Added");
         return qunatity1.value * qunatity1.unit.baseUnitConversion +
                 qunatity2.value * qunatity2.unit.baseUnitConversion;
 

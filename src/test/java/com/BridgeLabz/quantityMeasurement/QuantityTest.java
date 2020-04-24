@@ -150,28 +150,28 @@ public class QuantityTest {
         Assert.assertTrue(compareCheck);
     }
     @Test
-    public void given2InchAnd2Inch_performAddition_shouldReturnResultInInch() {
+    public void given2InchAnd2Inch_performAddition_shouldReturnResultInInch() throws QuantityException {
         Qunatity inch1 = new Qunatity(Unit.INCH,2.0);
         Qunatity inch2 = new Qunatity(Unit.INCH,2.0);
         double addition = qunatity.addition(inch1, inch2);
         Assert.assertEquals(4.0, addition,0.0);
     }
     @Test
-    public void given1FeetAnd2Inch_performAddition_shouldReturnResultInInch() {
+    public void given1FeetAnd2Inch_performAddition_shouldReturnResultInInch() throws QuantityException {
         Qunatity feet = new Qunatity(Unit.FEET,1.0);
         Qunatity inch = new Qunatity(Unit.INCH,2.0);
         double addition = qunatity.addition(feet, inch);
         Assert.assertEquals(14.0, addition,0.0);
     }
     @Test
-    public void given1FeetAnd1Feet_performAddition_shouldReturnResultInInch() {
+    public void given1FeetAnd1Feet_performAddition_shouldReturnResultInInch() throws QuantityException {
         Qunatity feet1 = new Qunatity(Unit.FEET,1.0);
         Qunatity feet2 = new Qunatity(Unit.FEET,1.0);
         double addition = qunatity.addition(feet1, feet2);
         Assert.assertEquals(24.0, addition,0.0);
     }
     @Test
-    public void given2InchAnd2Cm_performAddition_shouldReturnResultInInch() {
+    public void given2InchAnd2Cm_performAddition_shouldReturnResultInInch() throws QuantityException {
         Qunatity inch = new Qunatity(Unit.INCH,2.0);
         Qunatity cm = new Qunatity(Unit.CM,2.5);
         double addition = qunatity.addition(inch, cm);
@@ -192,14 +192,14 @@ public class QuantityTest {
         Assert.assertTrue(compareCheck);
     }
     @Test
-    public void givenGallonAndLitres_performAddition_shouldReturnResultInLitres() {
+    public void givenGallonAndLitres_performAddition_shouldReturnResultInLitres() throws QuantityException {
         Qunatity gallon = new Qunatity(Unit.GALLON,1.0);
         Qunatity litres = new Qunatity(Unit.LITRE,3.78);
         double addition = qunatity.addition(gallon, litres);
         Assert.assertEquals(7.57, addition,0.1);
     }
     @Test
-    public void givenLitresAndMillilitres_performAddition_shouldReturnResultInLitres() {
+    public void givenLitresAndMillilitres_performAddition_shouldReturnResultInLitres() throws QuantityException {
         Qunatity litres = new Qunatity(Unit.LITRE,1.0);
         Qunatity ml = new Qunatity(Unit.MILLILITRE,1000.0);
         double addition = qunatity.addition(litres, ml);
@@ -220,7 +220,7 @@ public class QuantityTest {
         Assert.assertTrue(compareCheck);
     }
     @Test
-    public void givenTonneAndGrams_performAddition_shouldReturnResultInKg() {
+    public void givenTonneAndGrams_performAddition_shouldReturnResultInKg() throws QuantityException {
         Qunatity tonne = new Qunatity(Unit.TONNE,1.0);
         Qunatity gm = new Qunatity(Unit.GRAM,1000.0);
         double addition = qunatity.addition(tonne, gm);
