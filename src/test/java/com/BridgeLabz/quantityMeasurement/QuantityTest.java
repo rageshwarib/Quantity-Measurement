@@ -79,28 +79,28 @@ public class QuantityTest {
     }
 
     @Test
-    public void given0FeetAnd0Inch_shouldReturnEqual() {
+    public void given0FeetAnd0Inch_shouldReturnEqual() throws QuantityException {
         Qunatity inch = new Qunatity(Unit.INCH,0.0);
         Qunatity feet = new Qunatity(Unit.FEET,0.0);
         boolean compareCheck = qunatity.compare(feet, inch);
         Assert.assertTrue(compareCheck);
     }
     @Test
-    public void given1FeetAnd1Inch_shouldReturnNotEqual() {
+    public void given1FeetAnd1Inch_shouldReturnNotEqual() throws QuantityException {
         Qunatity inch = new Qunatity(Unit.INCH,1.0);
         Qunatity feet = new Qunatity(Unit.FEET,1.0);
         boolean compareCheck = qunatity.compare(feet, inch);
         Assert.assertFalse(compareCheck);
     }
     @Test
-    public void given1InchAnd1Feet_shouldReturnNotEqual() {
+    public void given1InchAnd1Feet_shouldReturnNotEqual() throws QuantityException {
         Qunatity inch = new Qunatity(Unit.INCH,1.0);
         Qunatity feet = new Qunatity(Unit.FEET,1.0);
         boolean compareCheck = qunatity.compare(feet, inch);
         Assert.assertFalse(compareCheck);
     }
     @Test
-    public void given1FeetAnd12Inch_shouldReturnEqual() {
+    public void given1FeetAnd12Inch_shouldReturnEqual() throws QuantityException {
         Qunatity feet = new Qunatity(Unit.FEET,1.0);
         Qunatity inch = new Qunatity(Unit.INCH,12.0);
 
@@ -108,42 +108,42 @@ public class QuantityTest {
         Assert.assertTrue(compareCheck);
     }
     @Test
-    public void given12InchAnd1Feet_shouldReturnEqual() {
+    public void given12InchAnd1Feet_shouldReturnEqual() throws QuantityException {
         Qunatity inch = new Qunatity(Unit.INCH,12.0);
         Qunatity feet = new Qunatity(Unit.FEET,1.0);
         boolean compareCheck = qunatity.compare(inch, feet);
         Assert.assertTrue(compareCheck);
     }
     @Test
-    public void given1FeetAnd1Yard_shouldReturnNotEqual() {
+    public void given1FeetAnd1Yard_shouldReturnNotEqual() throws QuantityException {
         Qunatity feet = new Qunatity(Unit.FEET,1.0);
         Qunatity yard = new Qunatity(Unit.YARD,1.0);
         boolean compareCheck = qunatity.compare(feet, yard);
         Assert.assertFalse(compareCheck);
     }
     @Test
-    public void given3FeetAnd1Yard_shouldReturnEqual() {
+    public void given3FeetAnd1Yard_shouldReturnEqual() throws QuantityException {
         Qunatity feet = new Qunatity(Unit.FEET,3.0);
         Qunatity yard = new Qunatity(Unit.YARD,1.0);
         boolean compareCheck = qunatity.compare(feet, yard);
         Assert.assertTrue(compareCheck);
     }
     @Test
-    public void given1InchAnd1Yard_shouldReturnNotEqual() {
+    public void given1InchAnd1Yard_shouldReturnNotEqual() throws QuantityException {
         Qunatity inch = new Qunatity(Unit.INCH,1.0);
         Qunatity yard = new Qunatity(Unit.YARD,1.0);
         boolean compareCheck = qunatity.compare(inch, yard);
         Assert.assertFalse(compareCheck);
     }
     @Test
-    public void given1YardAnd36Inch_shouldReturnEqual() {
+    public void given1YardAnd36Inch_shouldReturnEqual() throws QuantityException {
         Qunatity yard = new Qunatity(Unit.YARD,1.0);
         Qunatity inch = new Qunatity(Unit.INCH,36.0);
         boolean compareCheck = qunatity.compare(yard, inch);
         Assert.assertTrue(compareCheck);
     }
     @Test
-    public void given2InchAnd5Cm_shouldReturnEqual() {
+    public void given2InchAnd5Cm_shouldReturnEqual() throws QuantityException {
         Qunatity inch = new Qunatity(Unit.INCH,2.0);
         Qunatity cm = new Qunatity(Unit.CM,5.0);
         boolean compareCheck = qunatity.compare(inch, cm);
@@ -178,14 +178,14 @@ public class QuantityTest {
         Assert.assertEquals(3.0, addition,0.0);
     }
     @Test
-    public void givenGallonAndLitres_shouldReturnEqual() {
+    public void givenGallonAndLitres_shouldReturnEqual() throws QuantityException {
         Qunatity gallon = new Qunatity(Unit.GALLON,1.0);
         Qunatity litre = new Qunatity(Unit.LITRE,3.78);
         boolean compareCheck = qunatity.compare(gallon, litre);
         Assert.assertTrue(compareCheck);
     }
     @Test
-    public void givenLitreAndMillilitres_shouldReturnEqual() {
+    public void givenLitreAndMillilitres_shouldReturnEqual() throws QuantityException {
         Qunatity litre = new Qunatity(Unit.LITRE,1.0);
         Qunatity ml = new Qunatity(Unit.MILLILITRE,1000.0);
         boolean compareCheck = qunatity.compare(litre, ml);
@@ -206,14 +206,14 @@ public class QuantityTest {
         Assert.assertEquals(2.0, addition,0.0);
     }
     @Test
-    public void givenKilogramAndGrams_shouldReturnEqual() {
+    public void givenKilogramAndGrams_shouldReturnEqual() throws QuantityException {
         Qunatity kg = new Qunatity(Unit.LITRE,1.0);
         Qunatity gm = new Qunatity(Unit.MILLILITRE,1000.0);
         boolean compareCheck = qunatity.compare(kg, gm);
         Assert.assertTrue(compareCheck);
     }
     @Test
-    public void givenTonneAndKilograms_shouldReturnEqual() {
+    public void givenTonneAndKilograms_shouldReturnEqual() throws QuantityException {
         Qunatity tonne = new Qunatity(Unit.TONNE,1.0);
         Qunatity kg = new Qunatity(Unit.KILOGRAM,1000.0);
         boolean compareCheck = qunatity.compare(tonne, kg);
