@@ -22,6 +22,17 @@ public class Qunatity {
 
     }
 
+    public double temperatureConversion(Qunatity quantity, Unit unit) {
+        switch (unit) {
+            case FAHRENHEIT:
+              return (quantity.value - 32) * (unit.baseUnitConversion);
+              case CELSIUS:
+                return ((quantity.value * (unit.baseUnitConversion)) + 32);
+        }
+       return quantity.value;
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

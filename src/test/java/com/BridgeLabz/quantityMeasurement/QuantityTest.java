@@ -226,4 +226,10 @@ public class QuantityTest {
         double addition = qunatity.addition(tonne, gm);
         Assert.assertEquals(1001.0, addition,0.0);
     }
+    @Test
+    public void givenFahrenheitAndCelsius_shouldReturnEqual() {
+        Qunatity fahrenheit = new Qunatity(Unit.FAHRENHEIT,212.0);
+        Qunatity celsius = new Qunatity(Unit.CELSIUS,100.0);
+       double fahreHeitToCelcius = qunatity.temperatureConversion(fahrenheit, Unit.FAHRENHEIT);
+    }
 }
