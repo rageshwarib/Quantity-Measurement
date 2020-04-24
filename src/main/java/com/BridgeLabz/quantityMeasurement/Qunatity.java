@@ -32,6 +32,9 @@ public class Qunatity {
        return quantity.value;
     }
 
+    public boolean compareTemperature(double qunatity1, Qunatity qunatity2){
+        return Double.compare(qunatity1, qunatity2.value) == 0;
+    }
 
     @Override
     public boolean equals(Object o) {

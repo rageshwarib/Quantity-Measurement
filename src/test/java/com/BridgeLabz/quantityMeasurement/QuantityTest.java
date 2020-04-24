@@ -231,5 +231,7 @@ public class QuantityTest {
         Qunatity fahrenheit = new Qunatity(Unit.FAHRENHEIT,212.0);
         Qunatity celsius = new Qunatity(Unit.CELSIUS,100.0);
        double fahreHeitToCelcius = qunatity.temperatureConversion(fahrenheit, Unit.FAHRENHEIT);
+        boolean compareCheck = qunatity.compareTemperature(fahreHeitToCelcius, celsius);
+        Assert.assertTrue(compareCheck);
     }
 }
